@@ -1,3 +1,5 @@
+src="card.js";
+
 function Hand() {
     // examples of the deal function in action
     var cardArray = [card1, card2];

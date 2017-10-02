@@ -1,3 +1,5 @@
+src="card.js";
+src="hand.js";
 function playAsDealer(){
     dealerHand =  new Hand();
     
@@ -13,4 +15,24 @@ function playAsUser() {
         playHand.hitMe();
     }
     return playerHand;
+}
+
+function declareWinner(userHand, dealerHand){
+    userScore = userHand.score();
+    dealerScore = dealerHand.score();
+
+    if(userScore > dealerScore)
+        return "You win!";
+    else if(userScore > dealerScore)
+        return "You lose!"; 
+    else
+        return "You tied";
+}
+
+function playGame(){
+    userHand = playAsUser();
+    dealerHand = playAsDealer();
+    
+    declareWinner(userHand, dealerHand);
+
 }
